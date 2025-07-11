@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EFT Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Escape From Tarkov</h1>
+        <h2>Hideout Tracker</h2>
+      </div>
+      <div class="item-section">
+        <form id="addItem" class="form-flex">
+          <div class="item-name first-item">
+            <label for="itemName">Nombre del item: </label>
+            <input
+              type="text"
+              id="itemName"
+              class="item-input"
+              placeholder="Ej: Noodles"
+              required
+            />
+          </div>
+          <div class="item-name">
+            <label for="itemsQuantity">Cantidad poseida: </label>
+            <input
+              min="0"
+              type="number"
+              id="itemsQuantity"
+              class="item-input"
+              placeholder="0"
+              required
+            />
+          </div>
+          <div class="item-name last-item">
+            <label for="itemsNeeded">Cantidad necesaria: </label>
+            <input
+              type="number"
+              id="itemsNeeded"
+              class="item-input"
+              placeholder="2"
+              min="0"
+              required
+            />
+          </div>
+          <div class="add-Button">
+            <button type="submit" class="btn-add">Añadir item</button>
+          </div>
+        </form>
+      </div>
+      <h2>Items necesitados:</h2>
+      <div class="item-list-container">
+        <div id="item-List" class="item-list"></div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

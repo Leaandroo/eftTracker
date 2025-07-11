@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #101828; /*Lo más seguro es que se quede*/
+  color: #d1d2d6; /*Cambiar*/
+}
+
+.container {
+  max-width: 80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.item-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: flex-start;
+}
+
+.form-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: gray; /*Cambiar*/
+  border-radius: 10px;
+}
+.item-name {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.first-item {
+  margin-left: 10px;
+}
+
+.last-item {
+  margin-right: 10px;
+}
+.item-input {
+  text-align: center;
+  min-width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+.add-Button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.btn-add {
+  padding: 10px;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.item-list-container {
+  margin-top: 20px;
+  display: flex;
+  width: 90%;
+  background-color: gray; /*Cambiar*/
+  border-radius: 10px;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  flex-grow: 1;
+  background-color: rgb(95, 94, 94);
+  margin: 10px;
+  min-width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card-name {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.card-need {
+  text-align: center;
+  padding-left: 10px;
+  font-size: 1.1rem;
+}
+.progress-section {
+  margin: auto;
+  padding: auto;
+  width: 80%;
+}
+.progress-text {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: lightgray;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: green;
+}
+
+.progress-fill.blue {
+  background-color: blue;
+}
+
+.card-buttons {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
