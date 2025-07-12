@@ -3,59 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EFT Tracker</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Contenedor global-->
     <div class="container">
+      <!--Contenedor del titulo y subtitulo-->
       <div class="title">
         <h1>Escape From Tarkov</h1>
         <h2>Hideout Tracker</h2>
       </div>
-      <div class="item-section">
-        <form id="addItem" class="form-flex">
-          <div class="item-name first-item">
-            <label for="itemName">Nombre del item: </label>
-            <input
-              type="text"
-              id="itemName"
-              class="item-input"
-              placeholder="Ej: Noodles"
-              required
-            />
+      <!--Contenedor del formulario-->
+      <div class="item-input-container">
+        <form class="form">
+          <!-- Contendeor del inputName-->
+          <div id="itemName" class="item-input">
+            <label for="">Item name: <span>*</span></label>
+            <input type="text" required placeholder="Ej: Bolts" class="input-style" />
           </div>
-          <div class="item-name">
-            <label for="itemsQuantity">Cantidad poseida: </label>
-            <input
-              min="0"
-              type="number"
-              id="itemsQuantity"
-              class="item-input"
-              placeholder="0"
-              required
-            />
+          <!-- Contenedor de los items en posesion-->
+          <div id="itemHideout" class="item-input">
+            <label for="">Quantity in stash: <span>*</span></label>
+            <input type="number" required placeholder="Ej: 0" min="0" max="100" class="input-style" />
           </div>
-          <div class="item-name last-item">
-            <label for="itemsNeeded">Cantidad necesaria: </label>
-            <input
-              type="number"
-              id="itemsNeeded"
-              class="item-input"
-              placeholder="2"
-              min="0"
-              required
-            />
+          <!-- Contendor de los items necesitados-->
+          <div id="itemNeeded" class="item-input">
+            <label for="">Quantity needed: <span>*</span></label>
+            <input type="number" required placeholder="Ej: 6" min="1" max="100" class="input-style" />
           </div>
-          <div class="add-Button">
-            <button type="submit" class="btn-add">Añadir item</button>
+          <!-- Contendor del selector de modulo-->
+          <div id="moduleSelector" class="item-input">
+            <label for="">Select module: </label>
+            <select name="" id="" class="input-style">
+              <option value="">Workbench</option>
+              <option value="">Gym</option>
+              <option value="">Medstation</option>
+            </select>
+          </div>
+          <!-- Contendor del boton de añadir-->
+          <div id="addButton" class="button">
+            <button type="submit" class="add-button">Add item</button>
           </div>
         </form>
       </div>
-      <h2>Items necesitados:</h2>
-      <div class="item-list-container">
-        <div id="item-List" class="item-list"></div>
+      <div class="item-list">
+        <p>No items in tracking</p>
       </div>
     </div>
   </body>
-  <script src="main.js"></script>
 </html>
