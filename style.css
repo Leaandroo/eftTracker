@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@font-face {
+  font-family: "Bender";
+  src: url("./font/Bender.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +12,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Bender", sans-serif;
   background-color: #0e0f0f; /*Lo más seguro es que se quede*/
   color: #e0e0e0; /*Cambiar*/
+  background-repeat: no-repeat;
 }
 label {
   text-align: left;
@@ -23,6 +28,11 @@ label {
 span {
   margin-bottom: 5px;
   color: rgb(248, 28, 28);
+  font-size: 1.2rem;
+}
+h1,
+h2 {
+  color: #8a7c64;
 }
 
 input {
@@ -32,6 +42,7 @@ input {
   color: #e0e0e0;
   border-radius: 8px;
   padding: 8px;
+  font-family: "Bender";
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -40,11 +51,18 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 select {
+  font-family: "Bender";
   padding: 2px;
   color: #e0e0e0;
   background-color: #414346;
   border-radius: 8px;
 }
+
+svg {
+  margin: -30 10px;
+}
+
+/*Empiezan los estilos del form*/
 .container {
   display: flex;
   flex-direction: column;
@@ -54,15 +72,15 @@ select {
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
+  width: 100%;
   font-size: 2rem;
   text-align: center;
 }
 
 .item-input-container {
-  width: 50%;
+  width: 70%;
   padding: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.548);
+  border: 2px solid #8a7c64;
   border-radius: 9px;
   background-color: #1b1c1d;
   flex-grow: 1;
@@ -76,10 +94,11 @@ select {
 }
 
 .item-input {
+  height: 70%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  min-width: 190px;
+  min-width: 220px;
   flex: 1 0 auto;
   margin-top: 5px;
   align-items: center;
@@ -99,11 +118,118 @@ select {
   margin: 10px 0px;
   width: 93%;
   height: 30px;
-  background: black;
+  background: #8a7c64;
   color: #e0e0e0;
   border: none;
   cursor: pointer;
   border-radius: 20px;
   font-weight: 500;
   font-size: 16px;
+}
+/*Terminan los estilos del form*/
+
+.item-list-container {
+  border: 2px solid #8a7c64;
+  border-radius: 9px;
+  background-color: #1b1c1d;
+  flex-grow: 1;
+  width: 90%;
+  margin-top: 15px;
+  display: flex;
+}
+
+.item-list {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item-card {
+  flex-grow: 1;
+  background-color: rgb(95, 94, 94);
+  margin: 10px;
+  background-color: #1b1c1d;
+  border: 2px solid #8a7c64;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.card-name {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.25rem;
+}
+
+.card-need {
+  font-size: 1.1rem;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.progress-section {
+  margin: auto;
+  padding: auto;
+  width: 80%;
+}
+.progress-text {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #1b1c1d;
+  border: 1px solid #8a7c64;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 5s ease-in-out;
+  background-color: #8a7c64;
+}
+
+.card-buttons {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 5px;
+  font-family: "Bender", sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #8a7c64;
+  color: #e0e0e0;
+}
+
+.btn-plus,
+.btn-minus,
+.btn-delete {
+  background-color: #1b1c1d;
+  cursor: pointer;
+}
+
+.btn-plus:hover {
+  background-color: rgb(78, 133, 78);
+}
+
+.btn-delete:hover {
+  background-color: rgb(153, 49, 49);
+}
+
+.btn-minus:hover {
+  background-color: #ff8c00;
+}
+p {
+  margin: auto;
+  padding: auto;
 }
